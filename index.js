@@ -1,9 +1,9 @@
-// Project Javascript Todos Project
-const myTodos = [
+// Project Javascript Jobs Project
+const myJobs = [
   {
     id: 1,
     job: "UX designer",
-    tags: ["Html", "Css", "Bootstraps", "Javascript"],
+    tags: ["HTML", "CSS", "Bootstrap", "JavaScript"],
     about: "Consider the why, what and how of product use"
   },
   {
@@ -24,21 +24,21 @@ const myTodos = [
   },
   {
     id: 3,
-    job: "User",
-    tags: ["Web browser", "Android", "Ios"],
-    about: "Utilizes a computer or network service."
+    job: "Tester",
+    tags: ["Web browser", "Android", "IOS"],
+    about:
+      "Optimize the design, functionality and usability of different applications."
   }
 ];
 
 console.log();
-// Show Todos
-const showTodos = data => {
+// Show Jobs
+const showJobs = data => {
   for (let index = 0; index < data.length; index++) {
     const item = data[index];
 
     let itemString = "";
 
-    itemString += item.completed ? `☑` : `☐`;
     itemString += item.favorite ? `⭐` : ``;
     itemString += ` ${item.job} `;
 
@@ -46,17 +46,17 @@ const showTodos = data => {
   }
 };
 
-showTodos(myTodos);
+showJobs(myJobs);
 
 console.log();
-// Search Todos
+// Search Jobs
 const searchByTag = tag => {
-  const result = myTodos
-    .map(todo => {
-      return todo;
+  const result = myJobs
+    .map(job => {
+      return job;
     })
-    .filter(todo => {
-      return todo.tags.includes(tag);
+    .filter(job => {
+      return job.tags.includes(tag);
     });
 
   return result;
@@ -68,17 +68,17 @@ console.log(search);
 
 console.log();
 // Add Todos
-const addTodos = myTodos.push({
+const addJobs = myJobs.push({
   id: 4,
   job: "Marketing",
   tags: ["Google Ads", "FB Ads", "SEO", "Data Science", "Merchandising"],
   about: "Consider the why, what and how of product use"
 });
 
-console.log(myTodos);
+console.log(myJobs);
 
 console.log();
 // removeTodos
-const removeTodos = myTodos.splice(0, 3);
+myJobs.splice(0, 3);
 
-console.log(myTodos);
+console.log(myJobs);
